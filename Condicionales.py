@@ -39,3 +39,20 @@ if (numero_escogido < 74):
 elif (numero_escogido >= 74):
     descuento_dos = valor_compra * 0.20
     print (f'El descuento que se le hara es de : ${descuento_dos}')
+
+"""     
+3. Una compañía de seguros está abriendo un departamento de
+finanzas y estableció un programa para captar clientes, que conssite
+en lo siguiente: Si el monto por el que se efectúa la fianza es menor
+que $50.000 la cuota a pagar será por el 3% del monto, y si el monto
+es mayor que $50.000 la cuota a pagar será el 2% del monto. La
+afianzadora desea determinar cual será la cuota que debe pagar al
+cliente.
+""" 
+monto_fianza = float(input('Digite el monto de la fianza : $ '))
+if(monto_fianza < 50000):
+   cuota = monto_fianza * 0.03
+   print (f'La cuota que debe pagar el cliente es de : ${cuota}')
+elif (monto_fianza > 50000):
+    cuota_dos = monto_fianza * 0.02
+    print (f'La cuota que debe pagar el cliente es de : ${cuota_dos}')
