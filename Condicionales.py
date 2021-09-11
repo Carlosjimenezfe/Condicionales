@@ -103,4 +103,29 @@ if(comprar_automovil < mitad):
     print('Comprar el carro')
 else:
     print ('Comprar el terreno')
+    
+"""
+6. En una fábrica de computadoras se planea ofrecer a los clientes un
+descuento que dependerá del número de computadoreas que
+compre. Si las computadoras son menos de cinco se les dará un 10%
+de descuento sobre el total de la compra; si el número de
+computadoras es mayor o igual a cinco pero menos de diez se le
+otorga un 20% de descuento; y si son 10 o más se les da un 40%. El
+precio de cada computadora es de $11.000.
+"""
 
+
+numero_pc = int (input('Digite el numero de pc compradas : '))
+valor = numero_pc * 11000
+if (numero_pc < 5):  
+    descuento_uno = valor * 0.10
+    total_uno = valor - descuento_uno
+    print (f'El valor total que debe pagar el cliente es de : {total_uno}')
+elif (numero_pc >= 5 and numero_pc <10):    
+    descuento_dos = valor * 0.20
+    total_dos = valor - descuento_dos
+    print(f'El valor total que debe pagar el cliente es de : ${total_dos}')
+else:
+    descuento_tres = valor * 0.40
+    total_tres = valor - descuento_tres
+    print (f'El valor que debe pagar el cliente es de : ${total_tres} ')
