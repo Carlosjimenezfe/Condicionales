@@ -129,3 +129,30 @@ else:
     descuento_tres = valor * 0.40
     total_tres = valor - descuento_tres
     print (f'El valor que debe pagar el cliente es de : ${total_tres} ')
+    
+"""    
+7. Un proveedor de estéreos ofrece un descuento del 10% sobre el
+precio sin IVA, de algún aparato si este cuesta $2000 o más. Además,
+independientemente de esto, ofrece un 5% de descuento si la marca
+es NOSY. Determinar cuanto pagará, con IVA incluido, un cliente
+cualquiera por la compra de su aparato. IVA es del 16%.
+"""
+precio_producto = float( input('Digite el precio del producto : $ '))
+marca_producto = input('Digite la marca del producto : ')
+if(precio_producto >= 2000 and marca_producto == 'NOSY'):
+    sin_iva = (precio_producto - (precio_producto*0.10))
+    con_iva = (sin_iva * 0.16) + sin_iva
+    marca_nosy = con_iva - (con_iva * 0.05)
+    print (f'El total a pagar el producto NOSY es de : ${marca_nosy}')   
+elif(precio_producto >= 2000 and marca_producto != 'NOSY'):
+    sin_iva = (precio_producto - (precio_producto*0.10))
+    con_iva = (sin_iva * 0.16) + sin_iva
+    print (f'El total a pagar el producto de marca {marca_producto} : ${con_iva}')   
+elif(precio_producto < 2000 and marca_producto == 'NOSY'):
+   con_iva = (precio_producto * 0.16) + precio_producto
+   marca_nosy = con_iva -(con_iva * 0.05)
+   print (f'El total a pagar el producto NOSY es de : ${marca_nosy}') 
+elif(precio_producto < 2000 and marca_producto != 'NOSY'):
+   con_iva = (precio_producto * 0.16) + precio_producto   
+   print (f'El total a pagar el producto de marca {marca_producto} : ${con_iva}')
+
