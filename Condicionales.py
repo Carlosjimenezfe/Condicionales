@@ -56,3 +56,31 @@ if(monto_fianza < 50000):
 elif (monto_fianza > 50000):
     cuota_dos = monto_fianza * 0.02
     print (f'La cuota que debe pagar el cliente es de : ${cuota_dos}')
+
+"""    
+4. Una fábrica ha sido sometida a un programa de control de
+contaminación para lo cual se efectúa una revisión de los puntos de
+contaminación generados por la fábrica. El programa de control de
+contaminación consiste en medir los puntos que emite la fábrica en
+cinco días de una semana y si el promedio es superior a los 170
+puntos entonces tendrá la sanción de parar su producción por una
+semana y una multa del 50% de las ganancias diarias cuando no se
+detiene la producción. Si el promedio obtenido de puntos es de 170 o
+menos entonces no tendrá ni sanción ni multa. El dueño de la fábrica
+desea saber cuanto dinero perderá después de ser sometido a la
+revisión.
+"""
+dinero_fabrica = float (input ('Digite la cantidad de dinero que tiene la fabrica : $ '))
+punto_uno = float(input('Digite los puntos del dia uno : '))
+punto_dos = float(input('Digite los puntos del dia dos : '))
+punto_tres = float(input('Digite los puntos del dia tres : '))
+punto_cuatro = float(input('Digite los puntos del dia cuatro : '))
+punto_cinco = float(input('Digite los puntos del dia cinco : '))
+promedio = (punto_uno + punto_dos + punto_tres + punto_cuatro + punto_cinco)/5
+if (promedio > 170):
+    descuento = dinero_fabrica * 0.50
+    perdidas = dinero_fabrica + descuento
+    print (f'El total de dinero que perdera la fabrica es de : ${perdidas}')
+elif(promedio <= 170):
+    print ('La fabrica no tendra ninguna perdida')
+
