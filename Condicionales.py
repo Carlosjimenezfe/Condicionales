@@ -83,4 +83,24 @@ if (promedio > 170):
     print (f'El total de dinero que perdera la fabrica es de : ${perdidas}')
 elif(promedio <= 170):
     print ('La fabrica no tendra ninguna perdida')
+    
+""" 
+5. Una persona se encuentra con un problema de comprar un automóvil
+o un terreno, los cuales cuestan exactamente lo mismo. Sabe que
+mientras el automóvil se devalúa, con el terreno sucede lo contrario.
+Esta persona comprará el automóvil si al cabo de tres años la
+devaluación de este no es mayor que la mitad del incremento del valor del terreno. Ayúdale a esta pesona a determinar si debe o no
+comprar el automóvil.
+""" 
+precio = float (input('Digite el valor del terrono y el carro : $ '))
+devaluo_carro = float (input('Digite el devaluo del carro por años : $ '))
+incremento_terreno = float (input('Digite el incremenento del terreno por años : $ '))
+
+comprar_automovil = (precio - (devaluo_carro * 3))
+comprar_terreno = precio + (incremento_terreno * 3)
+mitad = comprar_automovil / 2
+if(comprar_automovil < mitad):
+    print('Comprar el carro')
+else:
+    print ('Comprar el terreno')
 
