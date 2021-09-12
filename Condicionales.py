@@ -192,5 +192,21 @@ elif(monto_total < 500000):
     print(f'El valor del credito es de  : ${interes}')
     print(f'El valor del interes es de: ${credito_total} ')
     
+
+""" 
+9. Leer 2 números; si son iguales que lo multiplique, si el primero es
+mayor que el segundo que los reste y sino que los sume.
+""" 
+numero_uno = float(input('Digite un numero : '))
+numero_dos = float(input('Digite un numero : '))
+if(numero_uno == numero_dos):
+    resultado = numero_uno * numero_dos
+    print(f'El resultado total es de : {resultado}')
+elif(numero_uno > numero_dos):
+   resultado = numero_uno - numero_dos
+   print(f'El resultado total es de : {resultado}')
+elif(numero_uno < numero_dos):
+    resultado = numero_uno + numero_dos
+    print(f'El resultado total es de : {resultado}')
     
     
