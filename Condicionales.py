@@ -156,3 +156,41 @@ elif(precio_producto < 2000 and marca_producto != 'NOSY'):
    con_iva = (precio_producto * 0.16) + precio_producto   
    print (f'El total a pagar el producto de marca {marca_producto} : ${con_iva}')
 
+""" 
+8. Una empresa quiere hacer una compra de varias piezas de la misma
+clase a una fábrica de refacciones. La empresa, dependiendo del
+monto total de la compra, decidirá que hacer para pagar al fabricante.
+Si el monto total de la compra excede de $500.000 la empresa tendrá
+la capacidad de invertir de su propio dinero un 55% del monto de la
+compra, pedir prestado al banco un 30% y el resto lo pagará
+solicitando un crédito al fabricante. Si el monto total de la compra no
+excede de $500.00 la empresa tendrá capacidad de invertir de su
+propio dinero un 70% y el restante 30% lo pagará solicitando crédito
+al fabricante. El fabricante cobra por concepto de interes un 20%
+sobre la cantidad que se le pague a crédito. Obtener la cantidad a
+inverir, valor del préstamo, valor del crédito y los intereses.
+""" 
+
+monto_total = float (input('Digite el monto total de la compra : $ '))
+if(monto_total > 500000):
+    capacidad_invertir = monto_total * 0.55
+    pedir_prestamo = monto_total * 0.30
+    credito_fabricante = monto_total * 0.20
+    interes = credito_fabricante * 0.20
+    credito_total = credito_fabricante + interes        
+    print (f'la cantidad a invertir es de : ${capacidad_invertir} ')
+    print(f'El valor del prestamos es de: ${pedir_prestamo} ')
+    print(f'El valor del credito es de  : ${interes}')
+    print(f'El valor del interes es de: ${credito_total} ')
+
+elif(monto_total < 500000):
+    capacidad_invertir = monto_total * 0.70
+    credito_fabricante = monto_total * 0.30
+    interes = credito_fabricante * 0.20
+    total_interes = credito_fabricante + interes
+    print (f'la cantidad a invertir es de : ${capacidad_invertir} ')   
+    print(f'El valor del credito es de  : ${interes}')
+    print(f'El valor del interes es de: ${credito_total} ')
+    
+    
+    
