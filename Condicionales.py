@@ -208,5 +208,23 @@ elif(numero_uno > numero_dos):
 elif(numero_uno < numero_dos):
     resultado = numero_uno + numero_dos
     print(f'El resultado total es de : {resultado}')
+
+"""     
+10. Leer tres números diferentes e imprimir el número mayor de los
+tres
+""" 
+numero_uno = float(input('Digite un numero : '))
+numero_dos = float(input('Digite un numero : '))
+numero_tres = float(input('Digite un numero: '))
+if(numero_uno > numero_dos and numero_uno > numero_tres):
+    print(f'El número mayor es: {numero_uno}')
+elif(numero_dos >  numero_uno and numero_dos > numero_tres):
+    print(f'El número mayor es: {numero_dos}')
+elif(numero_tres >  numero_uno and numero_tres > numero_uno):
+    print(f'El número mayor es: {numero_tres}')
+  
+         
+       
+       
     
     
